@@ -27,8 +27,13 @@
 // 1.yarn add -D babel-loader @babel/core @babel/preset-env
 // 2.配置rules
 
+// Vue CLI
+// 1.npm install -D vue-loader vue-template-compiler
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { VueLoaderPlugin } = require('vue-loader')
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -115,6 +120,19 @@ module.exports = {
           },
         },
       },
-    ],
+
+      // vue-loader
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      },
+      
+    ]
   },
+
+  // vue
+  plugins: [
+    // 请确保引入这个插件！
+    new VueLoaderPlugin()
+  ]
 };

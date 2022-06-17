@@ -26,5 +26,7 @@ import "./assets/fonts/iconfont.css";
 class App {
   static a = '三三';
 }
-
 console.log(App.a);
+
+//引入vue
+import apps from "./app.vue"
