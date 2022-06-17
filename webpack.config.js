@@ -29,6 +29,12 @@ module.exports = {
         //从后往前解析，先通过css-loader解析，再通过style-loader解析
         use: ["style-loader", "css-loader"] 
       },
+      // less-loader
+      { 
+        test: /\.less/i, 
+        //从后往前解析，先通过css-loader解析，再通过style-loader解析
+        use: ["style-loader", "css-loader", "less-loader"] 
+      },
       
     ],
   },
