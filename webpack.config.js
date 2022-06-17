@@ -23,6 +23,10 @@
 // 2.package.json 配置 "serve": "webpack serve"
 // 3.在webpack.config.js中配置
 
+// 高级js———》低级js
+// 1.yarn add -D babel-loader @babel/core @babel/preset-env
+// 2.配置rules
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -97,6 +101,18 @@ module.exports = {
         generator: {
           // 放在fonts文件夹下
           filename: "fonts/font-[hash:6][ext]",
+        },
+      },
+
+      // babel-loader
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"], // 预设:转码规则(用bable开发环境本来预设的)
+          },
         },
       },
     ],
