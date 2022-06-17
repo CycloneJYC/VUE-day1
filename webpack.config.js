@@ -9,8 +9,12 @@
 // 1.安装 yarn add less less-loader -D
 // 2.配置rules
 
-const path = require("path");
+// 打包自动创建html
+// 1.yarn add html-webpack-plugin
+// 2. 填入配置项
 
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -19,6 +23,14 @@ module.exports = {
   },
   //mode 模式
   mode: "development",
+
+  // 打包自动创建html 配置
+  plugins: [
+    new HtmlWebpackPlugin({
+      // 告诉webpack使用插件时, 以我们自己的html文件作为模板去生成dist/html文件
+      template: "./public/index.html",
+    }),
+  ],
 
   //   配置 loaders
   module: {
