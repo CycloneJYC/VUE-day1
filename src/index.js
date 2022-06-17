@@ -19,3 +19,6 @@ ygg.src = yggsrc
 document.body.append(logo)
 document.body.append(ygg)
 
+//引入字体文件
+import './assets/fonts/iconfont.css'
+

@@ -23,7 +23,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "dist"), // 出口路径
+    path: path.join(__dirname, "lib"), // 出口路径
     filename: "main.js", // 出口文件名
     clean: true, 
   },
@@ -58,7 +58,7 @@ module.exports = {
       // 配置图片打包
       {
         test: /\.(png|jpg|gif|jpeg)$/i,
-        // asset/resource 将图片原样打包
+        // asset/resource 将资源原样打包
         // asset/inline 讲图片以dataURL的形式打包进js中
         // asset 超过8kb原样打包，小于8kb以dataURL的形式打包进js中
         type: 'asset',
@@ -72,6 +72,19 @@ module.exports = {
             }
         }
         
+      },
+
+      // 字体配置
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+
+        //generator: 发生器
+        //设定打包后的路径以及文件名
+        generator: {
+            // 放在fonts文件夹下
+            filename: 'fonts/font-[hash:6][ext]'
+        }
       },
 
     ],
