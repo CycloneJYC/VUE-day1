@@ -156,7 +156,27 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_box1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/box1.js */ \"./src/box1.js\");\n/* harmony import */ var _src_box2_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/box2.js */ \"./src/box2.js\");\n/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/index.css */ \"./src/styles/index.css\");\n/* harmony import */ var _styles_index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/index.less */ \"./src/styles/index.less\");\n//引入js文件\r\n\r\n\r\n(0,_src_box1_js__WEBPACK_IMPORTED_MODULE_0__.box1)()\r\n;(0,_src_box2_js__WEBPACK_IMPORTED_MODULE_1__.box2)()\r\n\r\n//引入css文件\r\n;\r\n//引入less文件\r\n\r\n\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_box1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/box1.js */ \"./src/box1.js\");\n/* harmony import */ var _src_box2_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/box2.js */ \"./src/box2.js\");\n/* harmony import */ var _styles_index_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/index.css */ \"./src/styles/index.css\");\n/* harmony import */ var _styles_index_less__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/index.less */ \"./src/styles/index.less\");\n/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/logo.png */ \"./src/assets/logo.png\");\n/* harmony import */ var _assets_ygg_jpeg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/ygg.jpeg */ \"./src/assets/ygg.jpeg\");\n//引入js文件\r\n\r\n\r\n(0,_src_box1_js__WEBPACK_IMPORTED_MODULE_0__.box1)()\r\n;(0,_src_box2_js__WEBPACK_IMPORTED_MODULE_1__.box2)()\r\n\r\n//引入css文件\r\n;\r\n//引入less文件\r\n\r\n\r\n//用原生js引入图片\r\n\r\n\r\nconst logo = document.createElement('img')\r\nconst ygg = document.createElement('img')\r\nlogo.src = _assets_logo_png__WEBPACK_IMPORTED_MODULE_4__\r\nygg.src = _assets_ygg_jpeg__WEBPACK_IMPORTED_MODULE_5__\r\ndocument.body.append(logo)\r\ndocument.body.append(ygg)\r\n\r\n\n\n//# sourceURL=webpack://webpack/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/assets/logo.png":
+/*!*****************************!*\
+  !*** ./src/assets/logo.png ***!
+  \*****************************/
+/***/ ((module) => {
+
+eval("module.exports = \"data:image/png;base64,AAABAAEAEBAAAAAAAABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAQAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAAAAACsXQasXQasXQasXQYAAAAAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAACsXQasXQasXQYAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAATAOYTAOYAAAAAAACsXQasXQasXQYAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAATAOYTAOYTAOYTAOYAAACsXQasXQasXQYAAAAAAAAAAAAAAACsXQasXQasXQYAAAAAAAATAOYTAOYTAOYAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAACsXQasXQasXQYAAAAAAAATAOYTAOYTAOYAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAACsXQasXQasXQYAAAAAAAAAAAAAAAAAAAAAAACsXQasXQYAAAAAAAAAAAAAAAAAAAAAAACsXQasXQasXQasXQasXQasXQasXQasXQasXQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACsXQasXQasXQasXQasXQasXQasXQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD+fwAA/n8AAM4fAADPjwAAzMcAAMwjAADGMwAA4xkAAPH5AAD4AwAA/gMAAP//AAD//wAA\";\n\n//# sourceURL=webpack://webpack/./src/assets/logo.png?");
+
+/***/ }),
+
+/***/ "./src/assets/ygg.jpeg":
+/*!*****************************!*\
+  !*** ./src/assets/ygg.jpeg ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"fa4b744f04a179c6d23d.jpeg\";\n\n//# sourceURL=webpack://webpack/./src/assets/ygg.jpeg?");
 
 /***/ })
 
@@ -211,6 +231,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -225,6 +257,26 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

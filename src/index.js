@@ -9,3 +9,13 @@ import './styles/index.css'
 //引入less文件
 import './styles/index.less'
 
+//用原生js引入图片
+import logosrc from './assets/logo.png'
+import yggsrc from './assets/ygg.jpeg'
+const logo = document.createElement('img')
+const ygg = document.createElement('img')
+logo.src = logosrc
+ygg.src = yggsrc
+document.body.append(logo)
+document.body.append(ygg)
+

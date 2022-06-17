@@ -13,6 +13,11 @@
 // 1.yarn add html-webpack-plugin
 // 2. 填入配置项
 
+// 一 asset/resource
+// webpack5内置了url-loader file-loader
+// 二 asset/inline 图片打包成dataurl，js
+// 小图片打包成base64，大图片打包成图片
+
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -20,6 +25,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"), // 出口路径
     filename: "main.js", // 出口文件名
+    clean: true, 
   },
   //mode 模式
   mode: "development",
@@ -48,6 +54,26 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"] 
       },
       
+      // asset/resource
+      // 配置图片打包
+      {
+        test: /\.(png|jpg|gif|jpeg)$/i,
+        // asset/resource 将图片原样打包
+        // asset/inline 讲图片以dataURL的形式打包进js中
+        // asset 超过8kb原样打包，小于8kb以dataURL的形式打包进js中
+        type: 'asset',
+
+        // parser:解析器
+        parser: {
+            // Condition: 条件
+            dataUrlCondition:{
+                //以字节为单位
+                maxSize: 2 * 1024 //限制界限为2kb
+            }
+        }
+        
+      },
+
     ],
   },
 };
