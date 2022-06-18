@@ -47,9 +47,10 @@ module.exports = {
   // 打包自动创建html 配置
   plugins: [
     new HtmlWebpackPlugin({
-      // 告诉webpack使用插件时, 以我们自己的html文件作为模板去生成dist/html文件
-      template: "./public/index.html",
+      template: './public/index.html',
+      filename: 'index.html'
     }),
+    new VueLoaderPlugin()
   ],
 
   // 配置devServer
@@ -130,9 +131,5 @@ module.exports = {
     ]
   },
 
-  // vue
-  plugins: [
-    // 请确保引入这个插件！
-    new VueLoaderPlugin()
-  ]
+  
 };
